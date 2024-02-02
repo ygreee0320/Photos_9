@@ -25,6 +25,9 @@ class MainActivity : AppCompatActivity() {
             )
             true
         }
+
+        // 초기화면으로 HomeFragment를 보여줄 수 있도록 설정
+        changeFragment(HomeFragment())
     }
 
     private fun changeFragment(fragment: Fragment) {
