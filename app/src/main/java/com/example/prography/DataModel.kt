@@ -13,9 +13,8 @@ data class UnsplashUrls(
 )
 
 // BookMarkPhotoEntity.kt
-@Entity(tableName = "bookmark_photos")
+@Entity(tableName = "bookmark_photo")
 data class BookMarkPhotoEntity(
-    @PrimaryKey(autoGenerate = true)
-    val id: Int = 0,
+    @PrimaryKey val photoId: String,
     val imageUrl: String
 )

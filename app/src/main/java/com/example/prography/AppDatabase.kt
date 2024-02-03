@@ -5,7 +5,7 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 
-@Database(entities = [BookMarkPhotoEntity::class], version = 1)
+@Database(entities = [BookMarkPhotoEntity::class], version = 5)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun bookMarkPhotoDao(): BookMarkPhotoDao
 
@@ -19,7 +19,9 @@ abstract class AppDatabase : RoomDatabase() {
                     context.applicationContext,
                     AppDatabase::class.java,
                     "app_database"
-                ).build()
+                )
+                    .fallbackToDestructiveMigration() // <- 이 부분을 추가
+                    .build()
                 instance = newInstance
                 newInstance
             }

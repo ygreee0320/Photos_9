@@ -145,10 +145,10 @@ class HomeFragment : Fragment() {
     }
 
     // 북마크 추가 예시 (이미지 URL이 있다고 가정)
-    private fun addBookmark(imageUrl: String) {
+    private fun addBookmark(photoId: String, imageUrl: String) {
         GlobalScope.launch(Dispatchers.IO) {
             // 데이터베이스에 북마크 추가
-            bookmarkDatabase.bookMarkPhotoDao().insertBookmark(BookMarkPhotoEntity(imageUrl = imageUrl))
+            bookmarkDatabase.bookMarkPhotoDao().insertBookmark(BookMarkPhotoEntity(photoId = photoId, imageUrl = imageUrl))
         }
     }
 
