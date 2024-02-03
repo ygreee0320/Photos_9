@@ -2,6 +2,7 @@
 <FrameLayout
     android:id="@+id/photo_layout"
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="190dp"
     android:layout_height="wrap_content"
     android:padding="4dp">
@@ -12,15 +13,17 @@
         android:layout_width="match_parent"
         android:layout_height="180dp"
         android:src="@drawable/loading"
+        android:background="@drawable/rounded_background"
         android:layout_gravity="center" />
 
     <TextView
         android:id="@+id/main_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="title"
-        android:textColor="@color/black"
-        android:textSize="19sp"
+        android:text="title\n타이틀은최대2줄까지"
+        android:maxLines="2"
+        android:textColor="@color/white"
+        android:textSize="15dp"
         android:paddingLeft="10dp"
         android:layout_gravity="bottom"
         android:paddingBottom="8dp" />

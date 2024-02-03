@@ -68,12 +68,14 @@ class PhotoDetailActivity : AppCompatActivity() {
                 // 버튼 이미지 변경
                 binding.saveBtn.setImageResource(R.drawable.bookmark)
                 Log.d("my log", "북마크 제거 완료")
+                isBookmarked = false
             } else {
                 // 북마크되어 있지 않으면 북마크 추가
                 saveToDatabase(photoId!!, imageUrl!!)
                 // 버튼 이미지 변경
                 binding.saveBtn.setImageResource(R.drawable.bookmark_done)
                 Log.d("my log", "북마크 저장 완료")
+                isBookmarked = true
             }
         }
 
