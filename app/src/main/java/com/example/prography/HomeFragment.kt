@@ -137,7 +137,7 @@ class HomeFragment : Fragment() {
 
             // 북마크된 이미지가 있으면 어댑터에 설정
             if (bookmarkPhotos.isNotEmpty()) {
-                bookmarkAdapter.updateData(bookmarkPhotos.map { it.imageUrl })
+                bookmarkAdapter.updateData(bookmarkPhotos.map { it })
             } else {
                 binding.bookmark.visibility = View.GONE
             }
