@@ -16,4 +16,9 @@ interface UnsplashApi {
         @Path("id") id: String,
         @Query("client_id") clientId: String
     ): UnsplashPhoto
+
+    @GET("photos/random")
+    suspend fun getRandomPhotos2(
+        @Query("client_id") clientId: String
+    ): UnsplashPhoto
 }
